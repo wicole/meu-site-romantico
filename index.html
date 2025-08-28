@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nosso Cantinho</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Título -->
+<section class="header">
+  <h1>❤️ Nosso Cantinho</h1>
+</section>
+
+  <!-- 1) Carrossel de fotos -->
+  <section class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-item">
+        <img src="imagem 1.jpeg" alt="Nosso momento 1" />
+      </div>
+      <div class="carousel-item">
+        <img src="imagem 2.jpeg" alt="Nosso momento 2" />
+      </div>
+      <div class="carousel-item">
+        <img src="imagem 3.jpeg" alt="Nosso momento 3" />
+      </div>
+      <div class="carousel-item">
+        <img src="imagem 4.jpeg" alt="Nosso momento 4" />
+      </div>
+    </div>
+
+    <div class="carousel-indicators">
+      <button class="heart active">❤️</button>
+      <button class="heart">❤️</button>
+      <button class="heart">❤️</button>
+      <button class="heart">❤️</button>
+    </div>
+  </section>
+
+  <!-- 2) Contador -->
+  <section class="contador">
+    <h2>Te amo há:</h2>
+    <div id="timer"></div>
+  </section>
+
+<section class="contador">
+  <h2 class="contador-title">Nossas Músicas</h2>
+  <!-- player e playlist -->
+</section>
+
+  <!-- Player -->
+  <div class="music-player">
+    <img class="cover" src="assets/imagens/capa1.jpg" alt="Capa da música">
+    <div class="music-info">
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <div class="time">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+    <button class="play-btn">▶</button>
+  </div>
+
+  <!-- Playlist -->
+  <div class="playlist">
+    <button class="music-btn" data-src="assets/musicas/musica1.mp3" data-cover="assets/imagens/capa1.jpg">Música 1</button>
+    <button class="music-btn" data-src="assets/musicas/musica2.mp3" data-cover="assets/imagens/capa2.jpg">Música 2</button>
+    <button class="music-btn" data-src="assets/musicas/musica3.mp3" data-cover="assets/imagens/capa3.jpg">Música 3</button>
+  </div>
+
+  <audio id="audio" src="assets/musicas/musica1.mp3"></audio>
+</section>
+
+  <!-- 4) Mensagem curta -->
+  <section class="mensagem">
+    <h2>Do meu coração</h2>
+    <p>Amor, fiz este cantinho para demonstrar o quanto você é importante para mim. Com você, a vida se tornou mais bela e colorida. Amo compartilhar momentos contigo e te desejo até a eternidade.Te amo infinitamente ❤️</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

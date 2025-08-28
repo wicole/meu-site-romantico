@@ -1,0 +1,350 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212; /* fundo escuro */
+  color: #fff; /* texto claro */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* ===== TÍTULO ===== */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.titulo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff2e2e; /* vermelho forte */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 6px rgba(255, 46, 46, 0.4); /* brilho suave */
+}
+
+/* ===== CARROSSEL ===== */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(255, 46, 46, 0.2);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ff2e2e; /* moldura vermelha */
+  box-shadow: 0 0 15px rgba(255, 46, 46, 0.3);
+}
+
+/* Indicadores do carrossel */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.heart {
+  font-size: 18px;
+  margin: 0 4px;
+  opacity: 0.3; /* mais sutil quando inativo */
+  transition: opacity 0.3s, transform 0.3s, color 0.3s;
+  color: #ff1a1a; /* vermelho do site */
+  cursor: pointer;
+  background: none; /* remove qualquer fundo */
+  border: none;
+}
+
+.heart.active {
+  opacity: 1;
+  transform: scale(1.3);
+  color: #ff4d4d; /* vermelho mais claro quando aceso */
+  text-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+}
+
+/* ===== CONTADOR ===== */
+.contador {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.contador h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff2e2e;
+}
+
+#timer {
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: #1e1e1e;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(255, 46, 46, 0.3);
+}
+
+/* ===== PLAYER DE MÚSICA ===== */
+.music-player {
+  display: flex;
+  align-items: center;
+  background: #181818;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 360px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(255, 46, 46, 0.3);
+}
+
+.music-player img.cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.music-info {
+  flex: 1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #ff2e2e;
+  transition: width 0.1s linear;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.play-btn {
+  background: #ff2e2e;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* ===== MENSAGEM CURTA ===== */
+.mensagem {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.mensagem h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ff2e2e;
+}
+
+.mensagem p {
+  font-size: 1.1rem;
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(255, 46, 46, 0.3);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .carousel-item img {
+    height: 200px;
+  }
+
+  #timer {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .mensagem p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .music-player img.cover {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.music-player {
+  display: flex;
+  align-items: center;
+  background: #181818;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 360px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(255, 46, 46, 0.3);
+}
+
+.music-player img.cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.music-info {
+  flex: 1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: #ff2e2e;
+  transition: width 0.1s linear;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.play-btn {
+  background: #ff2e2e;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.playlist {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.music-btn {
+  background: #1e1e1e;
+  color: #ff2e2e;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.music-btn:hover {
+  background: #ff2e2e;
+  color: #fff;
+}
+
+.contador-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ff3366; /* vermelho consistente com o tema */
+  margin-bottom: 15px;
+}
+
+.contador2 {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.contador2 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff2e2e;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 26, 26, 0.6), 0 0 20px rgba(255, 77, 77, 0.4);
+  margin: 20px 0;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Animação suave de brilho */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 26, 26, 0.6), 0 0 20px rgba(255, 77, 77, 0.4);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 26, 26, 1), 0 0 30px rgba(255, 77, 77, 0.6);
+  }
+}
+
+/* Traço decorativo animado abaixo do título */
+.header-underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff1a1a, #ff4d4d);
+  margin: 8px auto 0;
+  border-radius: 2px;
+  animation: slide 2s infinite alternate;
+}
+
+@keyframes slide {
+  from { transform: scaleX(0.7); opacity: 0.6; }
+  to { transform: scaleX(1); opacity: 1; }
+}
